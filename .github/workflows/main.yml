@@ -25,5 +25,6 @@ jobs:
     - name: Build dockerfile and push image 
       uses: docker/build-push-action@v7
       with:
+        context: .
         push: true
         tags: sonal04/myimagetoday
