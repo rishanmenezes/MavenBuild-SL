@@ -1,0 +1,17 @@
+name: CICD Java project
+on: push
+jobs:
+  CICD-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v6
+    - name: Install Java and Maven
+      uses: actions/setup-java@v5
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    - name: Test the code 
+      run: mvn test 
+    - name: Build the code 
+      run: mvn package
