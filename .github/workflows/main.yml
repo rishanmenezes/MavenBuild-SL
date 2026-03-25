@@ -1,6 +1,6 @@
 name: CICD Java project
-  on: push
-  jobs:
+on: push
+jobs:
     CICD-pipeline:
       runs-on: ubuntu-latest
       steps:
