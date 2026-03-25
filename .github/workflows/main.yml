@@ -35,5 +35,4 @@ jobs:
          username: ubuntu
          password: DevOps12
          port: 22
-         connect_timeout: 10s
          script: hostname -s
