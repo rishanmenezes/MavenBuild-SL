@@ -33,6 +33,6 @@ jobs:
         with: 
          host: 3.110.110.196
          username: ubuntu
-         password: DevOps12
+         key: ${{ secrets.SSH_KEY }}
          port: 22
          script: hostname -s
