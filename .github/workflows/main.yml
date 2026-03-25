@@ -1,3 +1,4 @@
+
 name: CICD Java project
 on: push
 jobs:
@@ -28,3 +29,15 @@ jobs:
         context: .
         push: true
         tags: sonal04/myimagetoday
+    - name: Deploy the Image on kubernetes cluster 
+      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+      with: 
+       host: 3.110.110.196
+       user: ubuntu
+       pass: DevOps12
+       port: 22
+       connect_timeout: 10s
+       first_ssh: |
+        sudo hostname -s
+        echo "hello from Github Actions"
+        mkdir -p /tmp/test1
